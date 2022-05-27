@@ -84,7 +84,13 @@ AWS có nhiều máy chủ tại nhiều khu vực trên toàn thế giới, gi�
 
 #### Section 3 - Introduction to Amazone Web Services
 
+##### 3.1 What is AWS
 
+- Một nền tảng đám mây an toàn (Secure Cloud Platform)
+- Cung cấp các dịch vụ theo yêu cầu (on-demand): Compute, storage, network, database,...
+- Khả năng mở rộng lớn, cài đặt nhanh trong vòng vài phút
+- Chỉ trả tiền cho các dịch vụ cần thiết (Pay as you go)
+- Các dịch vụ có sự liên kết với nhau
 
 
 

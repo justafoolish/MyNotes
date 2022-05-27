@@ -220,7 +220,7 @@ services:
 		build: <root_app>
 		container_name: <name>
 		ports:
-			- '<host_port>:<app_port>'
+			- '<host_port>:<app_port>''
 		volumes:
 			- <relative_path_folder>:<container_folder>
 			- <root_app>/node_modules
@@ -238,5 +238,20 @@ Build
 
 ```dockerfile
 docker-compose up
+```
+
+
+
+
+
+--------
+
+```
+- api
+	- Dockerfile
+	- src
+	- package.json
+- docker-compose.yaml
+
 ```
 

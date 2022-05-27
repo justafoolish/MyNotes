@@ -28,4 +28,3 @@ d : cut
 yy : copy current line
 dd : cut current line
 ```
-
