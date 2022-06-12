@@ -1,8 +1,32 @@
+---
+title: React JS
+date: 2022-05-26
+updated: 2022-05-30
+---
+
 ### **Table of contents**
 
 ---
 
+[**1. React Hook**](#react-hook)
 
+* [useState](#usestate)
+
+* [useEffect](#useeffect)
+
+* [React Memo](#react-memo)
+
+* [useCallback](#usecallback)
+
+* [useMemo](#usememo)
+
+* [useRef](#useref)
+
+* [useReducer](#usereducer)
+
+* [Context API](#context-api)
+
+[**2. Redux**](#redux)
 
 
 
@@ -15,7 +39,7 @@
 * Thể hiện trạng thái dữ liệu, dữ liệu thay đổi thì giao diện thay đổi
 * Sử dụng khi: Khi dữ liệu thay đổi thì giao diện tự cập nhật lại (re-render)
 
-```react
+```jsx
 import { useState } from "react";
 
 const Component = () => {
@@ -236,3 +260,63 @@ export default function Demo () {
 
 ```
 
+
+
+8. #### Context API
+
+* Context cung cấp một cách để truyền dữ liệu xuống cây component nhưng không cần thông qua props
+* Thứ tự
+  * Tạo Context
+  * Provider: Truyền dữ liệu
+  * Consumer: Nhận dữ liệu
+
+```jsx
+import { createContext, useContext } from "react";
+
+const Context = createContext();
+
+const Provider = ({children}) => {
+  
+  const value = {
+    //Các dữ liệu cần được truyền qua các component có thể là dữ liệu hoặc các phương thức.
+  }
+  
+  return (
+  	<Context.Provider value={value}>
+    	{children}
+    </Context.Provider>
+  );
+}
+
+
+const App = () => {
+  //Value nhận được thông qua prop value ở Provider. Có thể gọi lại ở bất cứ component con nào.
+  const value = useContext(Context);
+  
+  return (
+  	<Provider>
+    	// child component
+    </Provider>
+  );
+}
+```
+
+
+
+### Redux
+
+---
+
+1. #### useSelector
+
+
+
+2. #### useDispatch
+
+
+
+
+
+3. #### Setup Redux Store
+
+* 1 App có nhiều loại state khác nhau tương tự với các nhóm reducer khác nhau => rootReducer để kết hợp lại việc quản lý các nhóm reducer này cho App của mình
